@@ -10,15 +10,15 @@ h2{border-radius: 5px; background-color:wheat; text-align:center;
 </style>
 </head>
 <body>
- <h2>회원가입</h2>
+ <h2><b>회원가입</b></h2>
  <hr>
  <div id="regform">
   <form name='form1'>
    <label>이름</label>
-   <input type='text' name='name' size="40"><br>
+   <input type='text' name='name' value='일지매' size="40"><br>
    <hr>
    <label>이메일</label>
-   <input type='email' name='email' size="40"><br>
+   <input type='email' name='email' value='il@daum.net' size="40"><br>
    <button type="button" onclick="signUp()">가입</button>
   </form>
  </div>
@@ -34,8 +34,10 @@ h2{border-radius: 5px; background-color:wheat; text-align:center;
  function signUp(){
 	alert("가입할까요?"); 
 	document.getElementById('regform').style.display="none";
-	document.getElementById('rname').innerHTML =document.form1.name.value;
-	document.getElementById('remail').innerHTML =document.form1.email.value;
+	document.getElementById('rname').innerHTML 
+	           =document.form1.name.value;
+	document.getElementById('remail').innerHTML 
+	            =document.form1.email.value;
 	document.getElementById("result")
 	        .setAttribute("style",
 	         "display:block;background-color:Khaki;");
