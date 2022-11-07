@@ -1,20 +1,16 @@
-package jwBookMe;
+package jwbook;
 
 import java.util.Date;
 
 public class Todo {
-
 	private int tno;
 	private String title;
 	private String todoContent;
 	private Date dueDate;
 	private Date endDate;
 	
-	public Todo() {
-	
-	}
+	public Todo() {}
 	public Todo(int tno, String title, String todoContent, Date dueDate, Date endDate) {
-		super();
 		this.tno = tno;
 		this.title = title;
 		this.todoContent = todoContent;
@@ -59,4 +55,5 @@ public class Todo {
 	
 	
 	
+
 }

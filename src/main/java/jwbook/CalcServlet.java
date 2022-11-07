@@ -1,4 +1,4 @@
-package jwBookMe;
+package jwbook;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,21 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-// 잘 나오는 페이지 
 @WebServlet("/calc")
 public class CalcServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, 
 			             HttpServletResponse response) throws ServletException, IOException {
-		//요청받기(request) // 요청받은거 변수에 넣기 
+		//요청받기(request)
 		int n1 = Integer.parseInt(request.getParameter("n1"));
 		String op = request.getParameter("op");
 		int n2 = Integer.parseInt(request.getParameter("n2"));
 		
-		// 결과값을 long 타입으로 만들고 0으로 초기화 
+		//처리
 		long result =0;
 		
-		// 케이스별로 result타입을 바꿈 ! 
 		switch(op) {
 		case "+": result=n1+n2; break;
 		case "-": result=n1-n2; break;
