@@ -57,8 +57,8 @@ public class ProductController extends HttpServlet {
 	private String info(HttpServletRequest request, HttpServletResponse response) {
 		//service의 find(id)메소드로 리스트 추출하여 request에 담기
 		String id=request.getParameter("id");
-		//Product product = service.find(id);
-		//request.setAttribute("p", product);
+		 Product product = service.find(id);
+		 request.setAttribute("p", product);
 		//request.setAttribute("p", service.find(request.getParameter("id"))); 
 		return "/productInfo.jsp";
 	}

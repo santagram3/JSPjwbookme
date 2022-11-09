@@ -29,6 +29,11 @@ public class ProductServiceMybatis {
     return bookList;
     }
 
+
+	public Product find(String id) {
+		return productDAO.selectById(id);
+	}
+
     /*
     //Update
     System.out.println("");

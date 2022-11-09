@@ -83,4 +83,15 @@ public class ProductDAO {
         }
     }
    */
+
+public Product selectById(String id) {
+	Product product = null;
+	SqlSession session = sqlSessionFactory.openSession();
+	try {
+	     product = session.selectOne("product.selectById", id);
+	    } finally {
+	    session.close();
+	    }
+	 return product;
+  }
 }

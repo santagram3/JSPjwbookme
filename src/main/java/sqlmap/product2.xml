@@ -17,8 +17,8 @@
         SELECT * FROM product
     </select>
  
-    <select id="selectById" parameterType="string" resultMap="result">
-       SELECT * FROM product WHERE id = #{id}
+    <select id="selectById" parameterType="int" resultMap="result">
+        SELECT * FROM product WHERE id = #{id}
     </select>
  
     <insert id="insert" parameterType="Product">
